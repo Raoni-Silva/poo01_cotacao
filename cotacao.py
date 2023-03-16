@@ -18,6 +18,7 @@ cotacao = cotacoes[0]['timestamp']
 cotacao = time()
 
 df = pd.DataFrame.from_dict(cotacoes)
-df = df.apply(lambda x:timestampConvert(x))
+df = df[df[cotacao]].apply
 
 print(df.head())
+
