@@ -19,5 +19,6 @@ cotacao = time()
 
 df = pd.DataFrame.from_dict(cotacoes)
 df = df.apply(lambda x:timestampConvert(x))
+dsgfsd
 
 print(df.head())
