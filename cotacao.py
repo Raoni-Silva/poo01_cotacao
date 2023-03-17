@@ -22,3 +22,5 @@ df = df[df[cotacao]].apply
 
 print(df.head())
 
+#teste
+
