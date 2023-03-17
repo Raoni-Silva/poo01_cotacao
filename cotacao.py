@@ -14,6 +14,8 @@ def timestampConvert(x):
     data = datetime.strptime(data, '%Y-%m-%d')
     return data
 
+p = 1
+
 cotacao = cotacoes[0]['timestamp']
 cotacao = time()
 
