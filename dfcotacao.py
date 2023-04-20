@@ -22,6 +22,7 @@ class Cotacao():
     def cotacaoDoDia(self,d0 = dt.strftime(dt.today(),r'%Y%m%d'), d1=None):
         if d1 == None:
             url = self.api + 'start_date='+ d0 + '&end_date='+ d0
+            print(url)
             x = aux.pooAux()
             df = x.getApi(url)     
             print(df.fillna(method="ffill"))

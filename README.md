@@ -6,3 +6,4 @@
 <h2>O primeiro processo consite em obter os dados por meio do prompt, utilizando a biblioteca 'sys' nativa do python
 a segunda parte esta no armazenamento, que é onde o projeto esta sendo estruturado neste momento</h2>
 
+#simulacro testando branch
