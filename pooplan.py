@@ -2,19 +2,20 @@ import sys
 import requests
 import json
 import pandas as pd
+import dfcotacao as dc
+import auxiliar
 
 
 if sys.argv[1] == 'cotacao': 
-    cotacoes = requests.get('https://economia.awesomeapi.com.br/json/daily/USD-BRL/30')
-    cotacoes = cotacoes.json()
-    df = pd.DataFrame.from_dict(cotacoes)
+    dc.Cotacao().printCotacao()
 
-    df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s')
-    df['dia'] = df['timestamp'].dt.day
-    df['mes'] = df['timestamp'].dt.month
-    df['ano'] = df['timestamp'].dt.year
-
-    print(df.fillna(method="ffill"))
-
-if sys.argv[2] == 'xxx': 
-    print('XXX')
+if sys.argv[1] == 'dia':
+    if len(sys.argv) == 2:
+        dc.Cotacao().cotacaoDoDia()
+    if len(sys.argv) == 3:
+        d0 = sys.argv[2]
+        dc.Cotacao().cotacaoDoDia(d0)
+    if len(sys.argv) == 4:
+        d0 = sys.argv[2]
+        d1 = sys.argv[3]
+        dc.Cotacao().cotacaoDoDia(d0,d1)
